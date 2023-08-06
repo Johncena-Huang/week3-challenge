@@ -1,0 +1,49 @@
+@use '../abstracts' as *;
+.tablist {
+  display: flex;
+}
+.tab {
+  &--checked &__underscore {
+    background-color: #AA0601;
+    border: none;
+  }
+  height: 96px;
+  flex: 1 1 0;
+  &__link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+  }
+  &__link {
+    text-decoration: none;
+  }
+  &__underscore {
+    display: inline-block;
+    height: 8px;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #DCDCDC;
+    border-left: 1px solid #DCDCDC;
+    border-right: 1px solid #DCDCDC;
+  }
+  &__text {
+    display: inline-block;
+    width: 100%;
+    padding: 24px 0 16px;
+    font-size: 32px;
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+    border-top: 1px solid #DCDCDC;
+    border-right: 1px solid #DCDCDC;
+    border-left: 1px solid #DCDCDC;
+  }
+}
+@media only screen and (max-width: $breakpoint-mobile) {
+  .tab {
+    &__text {
+      font-size: 16px;
+    }
+  }
+}

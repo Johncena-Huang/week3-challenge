@@ -1,0 +1,101 @@
+@use '../abstracts' as *;
+.footer {
+  background-color: $color-primary;
+  &__container {
+    @include container;
+    padding: 48px 36px 32px;
+  }
+}
+.contact-area {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 32px;
+}
+.footer-nav {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 36px;
+  &__item {
+    height: 48px;
+    line-height: 48px;
+  }
+  &__link {
+    text-decoration: none;
+    color: #ffffff;
+  }
+}
+.social-links {
+  display: flex;
+  gap: 32px;
+  &__icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+.contact-list-container {
+  margin-bottom: 32px;
+}
+.contact-list {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  &:first-child {
+    margin-bottom: 8px;
+  }
+  &__info {
+    color: #ffffff;
+    font-size: 36px;
+  }
+}
+.copyright-info,
+.legal-right {
+  color: #ffffff;
+}
+.legal-right {
+  font-size: 14px;
+}
+.legal-info-area {
+  display: flex;
+  justify-content: space-between;
+}
+.legal-rights-container {
+  display: flex;
+  gap: 48px;
+}
+@media only screen and (max-width: $breakpoint-mobile) {
+  .footer {
+    &__container {
+      padding: 24px 14px;
+    }
+  }
+  .footer-nav {
+    display: none;
+  }
+  .social-links {
+    gap: 8px;
+    &__icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .contact-list-container {
+    margin-bottom: 24px;
+  }
+  .contact-area {
+    margin-bottom: 16px;
+  }
+  .contact-list {
+    &__icon {
+      height: 18px;
+      width: 18px;
+    }
+    &__info {
+      font-size: 16px;
+    }
+  }
+  .legal-info-area, .legal-rights-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

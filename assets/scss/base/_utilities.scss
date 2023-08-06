@@ -1,0 +1,86 @@
+@use '../abstracts' as *;
+.container {
+  @include container;
+}
+.btn {
+  display: block;
+  padding: 6px 12px;
+  background-color: $color-primary;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+.section-title {
+  color: $font-color-primary;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  @include responsive($breakpoint-mobile) {
+    font-size: 24px;
+  }
+}
+// Margin system
+@for $i from 1 through 12 {
+  .mb-#{$i} {
+    margin-bottom: $base-margin * $i;
+  }
+}
+@for $i from 1 through 12 {
+  .mb-md-#{$i} {
+    @include responsive($breakpoint-mobile) {
+      margin-bottom: $base-margin * $i;
+    }
+  }
+}
+.mx-auto {
+  margin: 0 auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+// Grid system
+
+@for $i from 1 through 4 {
+  .row-cols-#{$i} {
+    & > * {
+      flex: 0 0 auto;
+      width: calc(100% / #{$i})
+    }
+  }
+}
+
+@each $bp, $breakpoint in reverseMap($grid-breakpoints) {
+  @for $i from 1 through 4 {
+    .row-cols-#{$bp}-#{$i} {
+      & > * {
+        @include responsive($breakpoint) {
+          flex: 0 0 auto;
+          width: calc(100% / #{$i})
+        }
+      }
+    }
+  }
+}
+@for $i from 1 through 12 {
+  .gx-#{$i * stripUnit($base-margin)} {
+    margin-left: calc(-1 * $base-margin * $i / 2) ;
+    margin-right: calc(-1 * $base-margin * $i / 2);
+    & > * {
+      padding-left: calc($base-margin * $i / 2);
+      padding-right: calc($base-margin * $i / 2);
+    }
+  }
+}
+@each $bp, $breakpoint in reverseMap($grid-breakpoints) {
+  @for $i from 1 through 12 {
+    .gx-#{$bp}-#{$i * stripUnit($base-margin)} {
+      @include responsive($breakpoint) {
+        margin-left: calc(-1 * $base-margin * $i / 2) ;
+        margin-right: calc(-1 * $base-margin * $i / 2);
+        & > * {
+          padding-left: calc($base-margin * $i / 2);
+          padding-right: calc($base-margin * $i / 2);
+        }
+      }
+    }
+  }
+}

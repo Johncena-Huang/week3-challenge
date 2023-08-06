@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+.question-page-container {
+  padding: 96px 36px;
+}
+.question-page-title-box {
+  border-left: 8px solid #9F1213;
+  margin-bottom: 32px;
+}
+.question-page-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-left: 16px;
+}
+.question-category-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.question-item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.question-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+@media only screen and (max-width: $breakpoint-mobile) {
+  .question-page-container {
+    padding: 40px 14px;
+  }
+  .question-page-title-box {
+    margin-bottom: 24px;
+  }
+  .question-page-title {
+    font-size: 24px;
+  }
+  .question-item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}

@@ -1,0 +1,245 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+// Banner
+.banner {
+  background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true');
+  background-size: cover;
+  background-position: top;
+  &__container {
+    @extend .container;
+    height: 787px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  @include responsive($breakpoint-mobile) {
+    background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-header-sm.png');
+    &__container {
+      height: 396px;
+    }
+  }
+}
+.banner-box {
+  color: $font-color-primary;
+}
+.banner-text {
+  text-align: right;
+  font-size: 36px;
+  @include responsive($breakpoint-mobile) {
+    font-size: 16px;
+  }
+}
+.banner-title {
+  font-size: 64px;
+  font-weight: 700;
+  @include responsive($breakpoint-mobile) {
+    font-size: 24px;
+  }
+}
+// Feature
+.feature {
+  background-color: $bg-color-primary;
+  &__container {
+    @extend .container;
+  }
+}
+.feature-card-container {
+  display: flex;
+  // gap: 24px;
+  flex-wrap: wrap;
+  @include responsive($breakpoint-mobile) {
+    flex-direction: column;
+  }
+}
+.feature-card {
+  &__icon {
+    height: 84px;
+    width: 84px;
+    margin: 0 auto 16px;
+  }
+  &__title {
+    color: $font-color-primary;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+}
+// Products
+.products-classic{
+  &__container {
+    @include container {
+      @include responsive($breakpoint-tablet) {
+        padding: 80px 216px;
+      }
+    };
+  }
+}
+.products-classic-card-container {
+  display: flex;
+  @include responsive($breakpoint-tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.products-classic-card {
+  &__img {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  &__title {
+    color: #AA0601;
+    font-size: 48px;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+  }
+  @include responsive($breakpoint-tablet) {
+    width: 100%;
+  }
+}
+// Products-special
+.products-special {
+  background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  &__container {
+    @extend .container;
+  }
+}
+.products-special-title {
+  color: #FFFFFF;
+}
+.products-special-card-container {
+  display: flex;
+  @include responsive($breakpoint-mobile) {
+    flex-direction: column;
+  }
+}
+.products-special-card {
+  &:first-child {
+    box-sizing: content-box;
+    border-right: 1px solid #E9E8E8;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__title {
+    padding: 8px 0;
+    background-color: $bg-color-white;
+    color: $font-color-primary;
+    font-size: 48px;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+  }
+}
+// testimonials
+.testimonials {
+  &__container {
+    @extend .container;
+  }
+}
+.testimonials-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  @include responsive($breakpoint-mobile) {
+    gap: 16px;
+    flex-direction: column;
+  }
+}
+.testimonial-card {
+  width: calc((100% - 24px * 3) / 4);
+  display: flex;
+  flex-direction: column;
+  min-height: 511px;
+  box-shadow: 0px 2px 6px #00000029;
+  border: 1px solid #DEE2E6;
+  border-radius: 4px;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    flex-grow: 1;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__name {
+    font-weight: 500;
+  }
+  &__date {
+    margin-top: auto;
+    font-size: 14px;
+    color: #707070;
+  }
+  @include responsive($breakpoint-tablet) {
+    width: calc((100% - 24px) / 2);
+  }
+  @include responsive($breakpoint-mobile) {
+    width: 100%;
+  }
+}
+// contact-us
+.contact-us {
+  background-color: $bg-color-primary;
+  &__container {
+    @extend .container;
+  }
+}
+.contact-us-text {
+  max-width: 636px;
+  font-size: 20px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+.contact-form {
+  max-width: 636px;
+  margin: 0 auto;
+  &__label {
+    display: inline-block;
+    margin-bottom: 8px;
+    &:last-of-type {
+      margin-bottom: 48px;
+    }
+  }
+  &__input {
+    height: 36px;
+    width: 100%;
+    padding: 6px 12px;
+    border: 1px solid #000000;
+    background: transparent;
+    margin-bottom: 16px;
+    &::placeholder {
+      color: #c9c2c2;
+    }
+  }
+  &__textarea {
+    width: 100%;
+    padding: 6px 12px;
+    background: transparent;
+    resize: none;
+    border: 1px solid #000000;
+    margin-bottom: 16px;
+    &::placeholder {
+      color: #c9c2c2;
+    }
+  }
+  &__button {
+    display: block;
+    width: 416px;
+    padding: 16px 0;
+    margin: 0 auto;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    background-color: $color-primary;
+    @include responsive($breakpoint-mobile) {
+      width: 100%;
+    }
+  }
+}

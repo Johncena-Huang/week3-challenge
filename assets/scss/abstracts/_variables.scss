@@ -1,0 +1,18 @@
+$color-primary: #AA0601;
+$color-secondary: #000000;
+$color-tertiary: #FBF2F2;
+$bg-color-primary: #FBF2F2;
+$bg-color-white: #FFFFFF;
+$font-color-primary: #650300;
+$breakpoint-tablet: 992px;
+$breakpoint-mobile: 767px;
+$container-width-pc: 1296px;
+$padding-x-pc: 36px;
+$padding-y-pc: 80px;
+$padding-x-mobile: 14px;
+$padding-y-mobile: 40px;
+$base-margin: 4px !default;
+$grid-breakpoints: (
+  md: 767px,
+  lg: 992px,
+) !default;

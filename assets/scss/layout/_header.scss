@@ -1,0 +1,60 @@
+
+@use '../abstracts' as *;
+.header {
+  background-color: $color-primary;
+  &__container {
+    @include container;
+    // height: 80px;
+    padding: 0 36px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.logo {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  &__text {
+    display: block;
+    width: 80px;
+    height: 49px;
+    background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/logo-white.png?raw=true');
+    background-size: contain;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
+  &__link {
+    color: #FFFFFF;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+}
+@media only screen and (max-width: $breakpoint-mobile) {
+  .header {
+    &__container {
+      padding: 0;
+    }
+  }
+  .logo {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .nav {
+    gap: unset;
+    width: 100%;
+    &__item {
+      width: 50%;
+      padding: 12px 62px;
+      border: 1px solid #FFFFFF;
+      text-align: center;
+    }
+  }
+}

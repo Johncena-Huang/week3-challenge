@@ -1,0 +1,19 @@
+@use './variables' as *;
+@mixin responsive ($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin container {
+  max-width: calc($container-width-pc + $padding-x-pc * 2);
+  margin: 0 auto;
+  padding: $padding-y-pc $padding-x-pc;
+  @content;
+  @include responsive($breakpoint-mobile) {
+    padding: $padding-y-mobile $padding-x-mobile;
+  }
+}
+// @mixin container {
+//   max-width: 1296px;
+//   margin: 0 auto;
+// }

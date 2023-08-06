@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Noto+Sans+TC:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
+    <title>about</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+		<%- include('./layout/tablist', { checked: 'sunglasses' }); -%>
+		<main>
+			<section class="products-banner">
+				<img class="banner-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-1.png" alt="banner-1">
+				<img class="banner-img" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-2.png" alt="banner-2">
+			</section>
+			<section class="product-collection">
+				<div class="product-collection__container container">
+					<h4 class="product-collection-title">2020 NEW COLLECTION</h4>
+					<p class="product-collection-text">賽璐珞鈦金屬混合鏡框</p>
+					<div class="product-card-container">
+						<div class="product-card product-card--glasses">
+							<img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-1.png" alt="product-1" class="product-card__img">
+							<div class="product-card__body">
+								<span class="product-card__model">BJ41600S</span>
+								<span class="product-card__price">NTD3,490</span>
+							</div>
+							<div class="product-card__footer">
+								<span class="product-card__color product-card__color--brown"></span>
+								<span class="product-card__color product-card__color--orange"></span>
+							</div>
+						</div>
+						<div class="product-card product-card--glasses">
+							<img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-2.png" alt="product-2" class="product-card__img">
+							<div class="product-card__body">
+								<span class="product-card__model">BJ41600S</span>
+								<span class="product-card__price">NTD3,490</span>
+							</div>
+							<div class="product-card__footer">
+								<span class="product-card__color product-card__color--brown"></span>
+								<span class="product-card__color product-card__color--orange"></span>
+							</div>
+						</div>
+						<div class="product-card product-card--glasses">
+							<img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-3.png" alt="product-3" class="product-card__img">
+							<div class="product-card__body">
+								<span class="product-card__model">BJ41600S</span>
+								<span class="product-card__price">NTD3,490</span>
+							</div>
+							<div class="product-card__footer">
+								<span class="product-card__color product-card__color--brown"></span>
+								<span class="product-card__color product-card__color--orange"></span>
+							</div>
+						</div>
+						<div class="product-card product-card--glasses">
+							<img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-4.png" alt="product-4" class="product-card__img">
+							<div class="product-card__body">
+								<span class="product-card__model">BJ41600S</span>
+								<span class="product-card__price">NTD3,490</span>
+							</div>
+							<div class="product-card__footer">
+								<span class="product-card__color product-card__color--brown"></span>
+								<span class="product-card__color product-card__color--orange"></span>
+							</div>
+						</div>
+						<div class="product-card product-card--glasses">
+							<img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-5.png" alt="product-5" class="product-card__img">
+							<div class="product-card__body">
+								<span class="product-card__model">BJ41600S</span>
+								<span class="product-card__price">NTD3,490</span>
+							</div>
+							<div class="product-card__footer">
+								<span class="product-card__color product-card__color--brown"></span>
+								<span class="product-card__color product-card__color--orange"></span>
+							</div>
+						</div>
+						<div class="product-card product-card--glasses">
+							<img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-6.png" alt="product-6" class="product-card__img">
+							<div class="product-card__body">
+								<span class="product-card__model">BJ41600S</span>
+								<span class="product-card__price">NTD3,490</span>
+							</div>
+							<div class="product-card__footer">
+								<span class="product-card__color product-card__color--brown"></span>
+								<span class="product-card__color product-card__color--orange"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<nav class="container pagination">
+				<ul class="pagination__list">
+					<li class="pagination__item"><a href="" class="pagination__link">上一頁</a></li>
+					<li class="pagination__item"><a href="" class="pagination__link pagination__link--current">1</a></li>
+					<li class="pagination__item"><a href="" class="pagination__link">2</a></li>
+					<li class="pagination__item"><a href="" class="pagination__link">3</a></li>
+					<li class="pagination__item"><a href="" class="pagination__link">4</a></li>
+					<li class="pagination__item"><a href="" class="pagination__link">5</a></li>
+					<li class="pagination__item"><a href="" class="pagination__link pagination__link--next">下一頁</a></li>
+				</ul>
+			</nav>
+		</main>
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
